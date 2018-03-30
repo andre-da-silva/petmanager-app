@@ -110,8 +110,8 @@ public class PetManager extends Observable {
 	private static void createTables() throws SQLException{
 		Connection connection = ActiveRecordManager.getConnection();
 		Statement stat = connection.createStatement();
-		stat.executeUpdate("drop table if exists people;");
-		stat.executeUpdate("drop table if exists pet;");
+		stat.executeUpdate("drop table if it exists people;");
+		stat.executeUpdate("drop table if it exists pet;");
 		stat.executeUpdate("create table people (id INTEGER PRIMARY KEY AUTOINCREMENT, name, job);");
 		stat.executeUpdate("create table pet (id INTEGER PRIMARY KEY AUTOINCREMENT,owner INTEGER REFERENCES people(id), name, breed);");
 	}
